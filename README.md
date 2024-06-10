@@ -10,3 +10,8 @@ Essentially, it provides a way to get the base address of a loaded DLL or execut
 GetModuleHandleW is widely used in legitimate software development, but it is also leveraged by malware for various purposes. 
 Malware developers often use GetModuleHandleW to get the base address of specific system DLLs (like kernel32.dll, user32.dll, etc.) to dynamically resolve the addresses of functions they want to call without directly importing them. 
 This helps in evading static analysis performed by Anti-Virus (AV) engines.
+
+# Example 
+Just include the header file "moduleHandle.h" & call the GetModuleCall()
+
+HANDLE hMkernel = GetModuleCall(L"kernel32.dll")
